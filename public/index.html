@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="dist/styles/reset.css">
+    <link rel="stylesheet" href="dist/styles/main.css">
+</head>
+
+<body>
+    <script type="text/html" id="searchTemplate">
+        <form class="search__form">
+            <input class="search__submit"
+                   type="button"
+                   value="Search"
+                   disabled
+                   aria-label="Search button"
+                   tabindex="3"
+            >
+            <div class="search__field-container">
+                <div class="search__field-wrapper">
+                    <input class="search__field"
+                           type="text"
+                           placeholder="Input any text..."
+                           aria-label="Search field"
+                           required
+                           tabindex="1"
+                           autocomplete="off"
+                    ><span></span>
+                    <button class="search__field-clear"
+                            type="reset"
+                            tabindex="2"
+                    ></button>
+                </div>
+
+                <ol class="search__suggestions-container">
+                    <li class="search__suggestion phrase selectable">
+                        <span class="link"><a href=""></a></span>
+                        <span class="place">in <strong>Phrase Overview</strong></span>
+                    </li>
+                    <li class="search__suggestion domain selectable">
+                        <span class="link"><a href=""></a></span>
+                        <span class="place">in <strong>Domain Overview</strong></span>
+                    </li>
+                    <li class="search__suggestion url selectable">
+                        <span class="link"><a href=""></a></span>
+                        <span class="place">in <strong>URL Overview</strong></span>
+                    </li>
+                </ol>
+            </div>
+        </form>
+    </script>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="search search-1"></div>
+            <div class="search search-2"></div>
+        </div>
+    </div>
+
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
